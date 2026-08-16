@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akshay Tours & Travels | Pune</title>
+<meta name="description" content="Akshay Tours & Travels - Reliable AC and Non-AC cars, outstation trips, airport transfers, local and corporate travel services in Pune, Maharashtra.">
+<style>
+:root{--green:#0f5132;--green2:#18794e;--dark:#10231a;--cream:#f6f8f4;--white:#fff;--gold:#d7a83b}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,sans-serif;color:#18231e;background:var(--white);line-height:1.6}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid #e6ece7}
+.nav{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:16px 20px}
+.logo{font-size:21px;font-weight:900;color:var(--green);letter-spacing:-.5px}.logo span{display:block;font-size:11px;color:#718078;letter-spacing:2px;text-transform:uppercase}
+.links{display:flex;gap:25px;font-size:14px;font-weight:700}.links a:hover{color:var(--green2)}
+.menu{display:none;border:0;background:none;font-size:25px}
+.hero{background:linear-gradient(100deg,rgba(8,35,24,.93),rgba(8,35,24,.58)),url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1800&q=85') center/cover;min-height:620px;color:#fff;display:flex;align-items:center}
+.hero-inner{max-width:1180px;width:100%;margin:auto;padding:80px 20px}
+.pill{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:7px 12px;border-radius:30px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+h1{font-size:clamp(42px,6vw,76px);line-height:1.02;max-width:850px;margin:18px 0}.hero p{font-size:18px;max-width:680px;color:#e5eee9}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:13px 19px;border-radius:8px;font-weight:800;display:inline-block}.primary{background:#fff;color:var(--green)}.secondary{border:1px solid rgba(255,255,255,.45);color:#fff}.whatsapp{background:#1fae62;color:#fff}
+.stats{background:var(--cream);border-bottom:1px solid #e6ece7}.stats-in{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);padding:28px 20px}.stat{padding:0 18px;border-right:1px solid #dce5df}.stat:last-child{border:0}.stat b{font-size:25px;color:var(--green);display:block}.stat small{color:#66736c}
+section{padding:88px 20px}.wrap{max-width:1180px;margin:auto}.eyebrow{color:var(--green2);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:2px}h2{font-size:42px;line-height:1.1;margin:9px 0 18px;color:var(--dark)}.lead{color:#66736c;max-width:700px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}.card{border:1px solid #e1e9e3;border-radius:14px;padding:28px;background:#fff;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:0 14px 35px #0c3d2110}.icon{font-size:32px}.card h3{margin:12px 0 5px;color:var(--dark)}.card p{color:#6a766f;margin:0}
+.fleet{background:var(--cream)}.cars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}.car{background:#fff;border-radius:14px;overflow:hidden;border:1px solid #e1e9e3}.car img{width:100%;height:170px;object-fit:cover}.car-body{padding:17px}.car h3{margin:0 0 4px}.tag{font-size:12px;color:#6a766f}
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.photo{min-height:470px;border-radius:18px;background:url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=85') center/cover}.ticks{display:grid;gap:13px;margin-top:25px}.tick{display:flex;gap:12px}.tick b{color:var(--green)}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin-top:35px}.gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px}.gallery img:first-child{height:452px;grid-row:span 2}
+.cta{background:var(--green);color:#fff;border-radius:18px;padding:48px}.cta h2{color:#fff}.cta p{color:#d8e8df}
+.contact{background:var(--cream)}.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px}.contact-card{background:#fff;border:1px solid #e1e9e3;border-radius:14px;padding:28px}.contact-row{padding:14px 0;border-bottom:1px solid #e7eee9}.contact-row:last-child{border:0}.contact-row small{display:block;color:#758079}.contact-row a{color:var(--green);font-weight:800}
+footer{background:#0b2117;color:#dce8e1;padding:35px 20px}.foot{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot small{color:#9db1a6}
+.float{position:fixed;right:18px;bottom:18px;background:#1fae62;color:#fff;border-radius:50px;padding:13px 18px;font-weight:900;box-shadow:0 10px 30px #0003;z-index:30}
+@media(max-width:1050px){.cars{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:850px){.links{display:none}.menu{display:block}.stats-in{grid-template-columns:repeat(2,1fr);gap:22px}.stat:nth-child(2){border:0}.cards{grid-template-columns:1fr 1fr}.cars{grid-template-columns:1fr 1fr}.feature,.contact-grid{grid-template-columns:1fr}.photo{min-height:340px}.gallery{grid-template-columns:1fr 1fr}.gallery img:first-child{height:250px;grid-column:span 2}}
+@media(max-width:560px){.hero{min-height:600px}.hero-inner{padding-top:60px}.stats-in{grid-template-columns:1fr 1fr}.cards,.cars{grid-template-columns:1fr}section{padding:65px 18px}h2{font-size:34px}.gallery{grid-template-columns:1fr}.gallery img:first-child{grid-column:auto;height:260px}.gallery img{height:200px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav">
+    <a class="logo" href="#home">AKSHAY TOURS & TRAVELS<span>Pune • Maharashtra</span></a>
+    <div class="links">
+      <a href="#services">Services</a><a href="#fleet">Cars</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+    </div>
+    <button class="menu" onclick="document.querySelector('.links').style.display=document.querySelector('.links').style.display==='flex'?'none':'flex'">☰</button>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-inner">
+    <span class="pill">Reliable travel partner in Pune</span>
+    <h1>Every journey,<br>made comfortable.</h1>
+    <p>AC & Non-AC cars on rent, airport transfers, outstation trips, local travel and corporate transportation — with dependable service whenever you need it.</p>
+    <div class="btns">
+      <a class="btn primary" href="tel:+917709117980">Call Now</a>
+      <a class="btn whatsapp" href="https://wa.me/917709117980?text=Hello%20Akshay%20Tours%20%26%20Travels%2C%20I%20want%20to%20book%20a%20car." target="_blank">WhatsApp Booking</a>
+      <a class="btn secondary" href="#fleet">View Our Cars</a>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stats-in">
+    <div class="stat"><b>24×7</b><small>Booking & travel support</small></div>
+    <div class="stat"><b>AC / Non-AC</b><small>Cars for every requirement</small></div>
+    <div class="stat"><b>Pune</b><small>Based in Maharashtra</small></div>
+    <div class="stat"><b>Safe & Reliable</b><small>Comfort-first travel</small></div>
+  </div>
+</div>
+
+<section id="services">
+<div class="wrap">
+  <span class="eyebrow">What we do</span><h2>Travel services built around you.</h2>
+  <p class="lead">From a quick airport drop to a multi-day family trip, choose a vehicle and service that fits your plan.</p>
+  <div class="cards">
+    <div class="card"><div class="icon">🚕</div><h3>Local Pune Travel</h3><p>Comfortable cars for local meetings, shopping, functions and daily travel.</p></div>
+    <div class="card"><div class="icon">🛣️</div><h3>Outstation Trips</h3><p>One-way and round trips for family, business and holiday travel across Maharashtra and beyond.</p></div>
+    <div class="card"><div class="icon">✈️</div><h3>Airport Transfers</h3><p>Pickup and drop service with convenient timing and a smooth door-to-door experience.</p></div>
+    <div class="card"><div class="icon">👨‍👩‍👧‍👦</div><h3>Family Tours</h3><p>Spacious vehicles for comfortable family journeys, sightseeing and weekend trips.</p></div>
+    <div class="card"><div class="icon">🏢</div><h3>Corporate Travel</h3><p>Professional transportation for office visits, events, meetings and guest transfers.</p></div>
+    <div class="card"><div class="icon">🚌</div><h3>Group Travel</h3><p>Traveller and larger vehicles for group tours, functions and long-distance travel.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="fleet" id="fleet">
+<div class="wrap">
+  <span class="eyebrow">Our fleet</span><h2>Choose the right ride.</h2>
+  <p class="lead">Popular vehicles available for rent, subject to availability.</p>
+  <div class="cars">
+    <div class="car"><img src="images/swift-dzire.png" alt="Swift Dzire"><div class="car-body"><h3>Swift Dzire</h3><span class="tag">Comfort • Economy • AC</span></div></div>
+    <div class="car"><img src="images/innova-crysta.png" alt="Innova Crysta"><div class="car-body"><h3>Innova Crysta</h3><span class="tag">Premium • Comfortable • AC</span></div></div>
+    <div class="car"><img src="images/ertiga.png" alt="Ertiga"><div class="car-body"><h3>Ertiga</h3><span class="tag">Family • Spacious • AC</span></div></div>
+    <div class="car"><img src="images/traveller-17-20.png" alt="Force Traveller 17 and 20 Seater"><div class="car-body"><h3>Traveller</h3><span class="tag">17 / 20 Seater • Groups</span></div></div>
+    <div class="car"><img src="images/tourist-bus.png" alt="Tourist Bus"><div class="car-body"><h3>Tourist Bus</h3><span class="tag">Group Tours • Comfortable</span></div></div>
+    <div class="car"><img src="images/wagonr.png" alt="WagonR"><div class="car-body"><h3>WagonR</h3><span class="tag">Economy • City Travel • AC</span></div></div>
+  </div>
+</div>
+</section>
+
+<section id="about">
+<div class="wrap feature">
+  <div class="photo"></div>
+  <div>
+    <span class="eyebrow">Why Akshay Tours & Travels</span><h2>Simple booking. Comfortable travel.</h2>
+    <p class="lead">We focus on making every trip straightforward — clear communication, suitable vehicles and dependable support from booking to destination.</p>
+    <div class="ticks">
+      <div class="tick">✓ <span><b>Wide vehicle choice</b><br>From sedans to spacious group vehicles.</span></div>
+      <div class="tick">✓ <span><b>Flexible travel plans</b><br>Local, airport and outstation requirements.</span></div>
+      <div class="tick">✓ <span><b>Easy WhatsApp booking</b><br>Send your pickup, destination and date.</span></div>
+      <div class="tick">✓ <span><b>Service across Pune & Maharashtra</b><br>Travel for work, family or holidays.</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="gallery">
+<div class="wrap">
+  <span class="eyebrow">Travel gallery</span><h2>Go farther. Travel better.</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85" alt="Road trip">
+    <img src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=900&q=80" alt="Mountain road">
+    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=900&q=80" alt="Travel road">
+    <img src="https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&w=900&q=80" alt="Highway">
+    <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=900&q=80" alt="Travel destination">
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="cta">
+    <span class="eyebrow" style="color:#b8d9c7">Ready to travel?</span>
+    <h2>Tell us where you're going.</h2>
+    <p>For a quick quote, message us on WhatsApp with pickup location, destination, date and number of passengers.</p>
+    <div class="btns"><a class="btn primary" href="https://wa.me/917709117980?text=Hello%20Akshay%20Tours%20%26%20Travels%2C%20please%20share%20a%20quote." target="_blank">Get a Quote</a><a class="btn secondary" href="tel:+919765443034">Call 9765443034</a></div>
+  </div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="wrap">
+  <span class="eyebrow">Visit or reach us</span><h2>Let's plan your next trip.</h2>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="contact-row"><small>Phone</small><a href="tel:+917709117980">7709117980</a> &nbsp; / &nbsp; <a href="tel:+919765443034">9765443034</a></div>
+      <div class="contact-row"><small>Email</small><a href="mailto:haridaskubade12@gmail.com">haridaskubade12@gmail.com</a></div>
+      <div class="contact-row"><small>Location</small><strong>Pune, Maharashtra</strong></div>
+      <div class="contact-row"><small>Booking</small><strong>24×7 service available</strong></div>
+    </div>
+    <div class="contact-card">
+      <h3>Quick booking</h3>
+      <p>Click WhatsApp and send your pickup point, destination, travel date and passenger count.</p>
+      <a class="btn whatsapp" href="https://wa.me/917709117980?text=Hello%20Akshay%20Tours%20%26%20Travels%2C%20I%20want%20to%20book%20a%20vehicle.%0APickup%3A%20%0ADestination%3A%20%0ADate%3A%20%0APassengers%3A%20" target="_blank">Book on WhatsApp</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <div class="foot"><div><strong>AKSHAY TOURS & TRAVELS</strong><br><small>Pune • Maharashtra</small></div><div><small>© 2026 Akshay Tours & Travels. All rights reserved.</small></div></div>
+</footer>
+<a class="float" href="https://wa.me/917709117980" target="_blank">💬 WhatsApp</a>
+</body>
+</html>
